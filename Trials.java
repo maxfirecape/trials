@@ -74,6 +74,7 @@ public class Trials {
         }
       } else {
         System.out.println("Invalid operator! Womp womp. Try again!\n"); 
+        main(args);
       }
       input.close();
     }

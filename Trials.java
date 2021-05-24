@@ -55,20 +55,17 @@ public class Trials {
            We add 60 to denote the progress we covered in the first 12 days (12*5=60)*/
           System.out.println("Perform 3 sets of 5 SQUATS for " + (a*2.5+60+sbar) + "lbs");           
           }
-
           if (a < 12){         
           System.out.println("Perform 3 sets of 5 OVERHEAD PRESS for " + (a*2.5+ebar) + "lbs");
           // The above exercise progresses each A Day by 5, so to express this across A and B days, the multiplier for 5 is halved to 2.5
          } else {
           System.out.println("Perform 3 sets of 5 OVERHEAD PRESS for " + (a+30+ebar) + "lbs");
          }
-
           if (a < 12){
           System.out.println("Perform 1 set of 5 DEADLIFTS for " + (a*7.5+dbar) + "lbs");
           } else {
           System.out.println("Perform 1 set of 5 DEADLIFTS for " + (a*2.5+90+dbar) + "lbs");
           }
-          
           System.out.println("Perform 3 sets of CHIN-UPS to Failure");
         
           // B Days
@@ -84,13 +81,11 @@ public class Trials {
           } else {
           System.out.println("Perform 3 sets of 5 BENCH PRESS for " + (a+30+ebar) + "lbs");
           }
-
           if (a < 12){
           System.out.println("Perform 5 sets of 3 POWER CLEANS for " + (a*2.5+2.5+ebar) + "lbs");
           } else {
           System.out.println("Perform 5 sets of 3 POWER CLEANS for " + (a+30+ebar) + "lbs");
           }
-        
           System.out.println("Optional: Perform BARBELL CURLS at 3 sets of 10");
         } 
         main(args);
@@ -98,7 +93,6 @@ public class Trials {
         System.out.println("Invalid operator! Womp womp. Try again!\n"); 
         main(args);
       }
-      input.close();
-        
+      input.close();  
     }
   }

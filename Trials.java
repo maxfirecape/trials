@@ -2,18 +2,15 @@ import java.util.Scanner;
 
 public class Trials {
     public static void main(String[] args) {
-      System.out.println("\n # T R I A L S # \n");
-      int sbar = 45;
-      int dbar = 45;
-      int ebar = 45;
-      // declares bar variables which get modified by algorithms associated with a
+      System.out.println(" # T R I A L S # ");
+      int bar = 45;
+      // declares bar variable which get modified by algorithms associated with a
 
       System.out.println("Welcome to TRIALS, a training program to help you min-max your strength gains.\n");
       System.out.println("Can you make it to TRIAL 96 without starting over?\n");
       System.out.println("Type rules, tips, or start to begin.\n");
       Scanner input = new Scanner(System.in);
       String input1 = input.nextLine();
-
 
       if (input1.equals("rules")) {
         System.out.println("\nThis is an adaption of the standard Starting Strength protocol.\n");
@@ -41,58 +38,43 @@ public class Trials {
       } else if (input1.equals("start")) {
         System.out.println("To start, please enter the number trial you are on.\n");
         Scanner in = new Scanner(System.in);
-        int a = in.nextInt();
+        int trial = in.nextInt();
 
         // Standard Periodization of Starting Strength - ABA BAB ABA BAB Days
         //A Days - we check the remainder of 2 to check for an even day, which is periodized as A day (odds are B days and the else condition)
 
-        if (a % 2 == 0){
+        if (trial % 2 == 0){
           // These nested if statements check the first two weeks or 12 sessions, as progression is typically faster here
-          if (a < 12){
-          System.out.println("Perform 3 sets of 5 SQUATS for " + (a*5+sbar) + "lbs");
+          if (trial < 12){
+          System.out.println("Perform 3 sets of 5 SQUATS for " + (trial*5+bar) + "lbs");
+          System.out.println("Perform 3 sets of 5 OVERHEAD PRESS for " + (trial*2.5+bar) + "lbs");
+          System.out.println("Perform 1 set of 5 DEADLIFTS for " + (trial*7.5+bar) + "lbs"); 
           } else {
           /* This condition changes the rate at which we progress in each trial, in this instance 5 times per session 
            We add 60 to denote the progress we covered in the first 12 days (12*5=60)*/
-          System.out.println("Perform 3 sets of 5 SQUATS for " + (a*2.5+60+sbar) + "lbs");           
-          }
-          if (a < 12){         
-          System.out.println("Perform 3 sets of 5 OVERHEAD PRESS for " + (a*2.5+ebar) + "lbs");
-          // The above exercise progresses each A Day by 5, so to express this across A and B days, the multiplier for 5 is halved to 2.5
-         } else {
-          System.out.println("Perform 3 sets of 5 OVERHEAD PRESS for " + (a+30+ebar) + "lbs");
-         }
-          if (a < 12){
-          System.out.println("Perform 1 set of 5 DEADLIFTS for " + (a*7.5+dbar) + "lbs");
-          } else {
-          System.out.println("Perform 1 set of 5 DEADLIFTS for " + (a*2.5+90+dbar) + "lbs");
+          System.out.println("Perform 3 sets of 5 SQUATS for " + (trial*2.5+60+bar) + "lbs"); 
+          System.out.println("Perform 3 sets of 5 OVERHEAD PRESS for " + (trial+30+bar) + "lbs");
+          System.out.println("Perform 1 set of 5 DEADLIFTS for " + (trial*2.5+90+bar) + "lbs");      
           }
           System.out.println("Perform 3 sets of CHIN-UPS to Failure");
-        
+          main(args); 
           // B Days
-
-        } else {
-          if (a < 12){
-          System.out.println("Perform 3 sets of 5 SQUATS for " + (a*5+sbar) + "lbs");
           } else {
-          System.out.println("Perform 3 sets of 5 SQUATS for " + (a*2.5+60+sbar) + "lbs");
-          }
-          if (a < 12){
-          System.out.println("Perform 3 sets of 5 BENCH PRESS for " + (a*2.5+2.5+ebar) + "lbs");
+          if (trial < 12){
+          System.out.println("Perform 3 sets of 5 SQUATS for " + (trial*5+bar) + "lbs");
+          System.out.println("Perform 3 sets of 5 BENCH PRESS for " + (trial*2.5+2.5+bar) + "lbs");
+          System.out.println("Perform 5 sets of 3 POWER CLEANS for " + (trial*2.5+2.5+bar) + "lbs");
           } else {
-          System.out.println("Perform 3 sets of 5 BENCH PRESS for " + (a+30+ebar) + "lbs");
-          }
-          if (a < 12){
-          System.out.println("Perform 5 sets of 3 POWER CLEANS for " + (a*2.5+2.5+ebar) + "lbs");
-          } else {
-          System.out.println("Perform 5 sets of 3 POWER CLEANS for " + (a+30+ebar) + "lbs");
+          System.out.println("Perform 3 sets of 5 SQUATS for " + (trial*2.5+60+bar) + "lbs");
+          System.out.println("Perform 3 sets of 5 BENCH PRESS for " + (trial+30+bar) + "lbs");
+          System.out.println("Perform 5 sets of 3 POWER CLEANS for " + (trial+30+bar) + "lbs");
           }
           System.out.println("Optional: Perform BARBELL CURLS at 3 sets of 10");
-        } 
-        main(args);
+          main(args);
+        }
       } else {
         System.out.println("Invalid operator! Womp womp. Try again!\n"); 
-        main(args);
       }
-      input.close();  
+      input.close();
     }
   }

@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Trials {
     public static void main(String[] args) {
-      System.out.println(" # T R I A L S # ");
+      System.out.println("\n # T R I A L S # \n");
       int sbar = 45;
       int dbar = 45;
       int ebar = 45;
@@ -24,7 +24,7 @@ public class Trials {
         System.out.println("and to get at least 120g of protein per day to succeed.\n");
         System.out.println("Putting on a pound of bodymass per week will ensure your success in this protocol.\n");        
         System.out.println("You must acquire two 1lb plates and two 2.5lb plates to take to the gym to ensure your success. \n");  
-        
+        main(args);
       } else if (input1.equals("tips")) {
         System.out.println("- Use a personal trainer or gym buddy to check your form, to avoid injury and ensure progression in later trials.\n");
         System.out.println("- Trust the process. This can be difficult, but with proper form, this program is doable for many beginners!\n");        
@@ -36,7 +36,7 @@ public class Trials {
         System.out.println("- Don't think about every minor detail. Just lift the weights up and put them down.\n");
         System.out.println("- Always TRAIN HARDER THAN LAST TIME! The end of TRIALS is only the beginning to big lifting. \n");
         System.out.println("- Remember to buy two 1lb plates and two 2.5lb plates to take to the gym to ensure the program runs properly. \n");
-
+        main(args);
 
       } else if (input1.equals("start")) {
         System.out.println("To start, please enter the number trial you are on.\n");
@@ -93,9 +93,10 @@ public class Trials {
         
           System.out.println("Optional: Perform BARBELL CURLS at 3 sets of 10");
         } 
-
+        main(args);
       } else {
         System.out.println("Invalid operator! Womp womp. Try again!\n"); 
+        main(args);
       }
       input.close();
         
